@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="sign-up">
+    <div class="container">
+        <div class="form-box" id="register-form">
+            <div class="image-section">
+                <img src="Images/sign-up.avif" alt="Register Illustration">
+            </div>
+            <div class="form-content">
+                <img src="Images/CrystalDeltaLogo.png" alt="Logo" class="logo">
+                <h2>Register</h2>
+                <!-- Form action added for JS handling -->
+                <form id="signup-form">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <p>Already have an account? <a href="index.html" id="show-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking JavaScript for handling form submission -->
+    <script src="js/signup.js"></script>
+</body>
+</html>

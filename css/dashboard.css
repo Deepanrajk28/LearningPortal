@@ -1,0 +1,627 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color:white;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensures padding is included in height */
+    transition: transform 0.3s ease; /* Smooth transition for moving content */
+}
+.content-container, .topbar {
+    transition: transform 0.3s ease; /* Apply the same transition to topbar */
+}
+
+/* Adjust the content and topbar when sidebar is active */
+.content-container.sidebar-active, .topbar.sidebar-active {
+    transform: translateX(250px); /* Move content and topbar to the right */
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure topbar is above the sidebar */
+}
+.topbar .search {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    width: 400px;
+}
+
+.topbar .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 100%; /* Prevents overflow */
+}
+
+/* Course Section */
+.course-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.course-section video {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Progress Section */
+.progress-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.progress-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.progress-card {
+    flex: 1;
+    background-color:#edf3ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(237,243,255,255);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.progress-card .progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-card .progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #1abc9c;
+    border-radius: 5px;
+}
+
+.progress-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-card .rating {
+    font-size: 16px;
+    color: #f39c12;
+}
+
+/* Side Content */
+.side-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%; /* Fills the full height of the parent */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Special Classes Section */
+.special-classes {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.special-classes .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.special-classes .header h3 {
+    font-size: 18px;
+    color: #000;
+}
+
+.special-classes .book-now-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.special-classes .book-now-btn:hover {
+    background-color: #0056b3;
+}
+
+/* No Booking Section */
+.no-booking {
+    background: #f7faff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.no-booking img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.no-booking h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+.no-booking p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.no-booking .book-now-secondary-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.no-booking .book-now-secondary-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Schedule Section */
+.schedule h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.schedule ul li:hover {
+    background-color:#edf3ff;
+}
+
+.schedule ul li span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.schedule ul li p {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Assignments Section */
+.assignments h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.assignments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.assignments ul li {
+    background-color:#edf3ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.assignments ul li:hover {
+    background-color: #dfe9f5;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar is hidden off-screen initially */
+    width: 250px;
+    height: 100vh; /* Full height */
+    background-color: #edf3ff;
+    color: black;
+    overflow: hidden; /* No scrolling in the sidebar */
+    transition: all 0.3s ease; /* Smooth transition for sidebar */
+    z-index: 100; /* Sidebar is above content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #edf3ff;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #0056b3;
+}
+
+
+.sidebar ul li i {
+    font-size: 18px;
+}
+
+.sidebar ul li span {
+    font-size: 16px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #edf3ff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-footer svg {
+    width: 24px; /* Adjust the size of the icon */
+    height: 24px; /* Adjust the size of the icon */
+}
+
+.sidebar-footer span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-footer:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+
+/* Menu Icon */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 101; /* Make sure menu button stays clickable */
+}
+
+.menu-icon svg {
+    fill: #000;
+}
+
+
+/* Modal backdrop styling */
+.modal {
+    display: none; /* Ensures the modal is hidden initially */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.show { 
+    display: flex; /* This class will show the modal */
+}
+
+/* Modal content container */
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    position: relative; /* Ensures proper alignment within the modal */
+}
+
+
+/* Header section */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.modal-header .modal-close-btn {
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-header .modal-close-btn:hover {
+    color: #333;
+}
+
+/* Form field styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+}
+.modal-body select,
+.modal-body input[type="date"] {
+    width: 100%; /* Makes the width consistent */
+    padding: 10px; /* Adds consistent padding */
+    font-size: 16px; /* Matches font size */
+    border: 1px solid #ccc; /* Matches border style */
+    border-radius: 6px; /* Matches rounded corners */
+    box-sizing: border-box; /* Ensures proper box-sizing */
+    appearance: none; /* Removes native browser styling (optional) */
+}
+
+/* Optional: Add consistent spacing between form elements */
+.modal-body div {
+    margin-bottom: 15px;
+}
+
+select:focus,
+input[type="date"]:focus {
+    border-color: #007BFF;
+    background: #fff;
+}
+
+/* Buttons in footer */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.save-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #007bff;
+}
+
+/* Modal fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.special-classes {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.special-classes h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.special-classes p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Container for the class details */
+.class-details {
+    background-color:#edf3ff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Take up full width within the container */
+    max-width: 400px; /* Limit the max width to 400px */
+    margin: 0 auto; /* Center align the class details */
+    position: relative;
+    box-sizing: border-box; /* Ensure padding doesn't push the width out of bounds */
+}
+
+/* Course Title */
+.class-details .course-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: blue; /* Blue color */
+    margin: 0;
+}
+
+/* Trainee Name */
+.class-details .trainee-name {
+    color: black; /* Black color */
+    margin: 5px 0;
+}
+
+.class-details .date-time {
+    display: flex; 
+    margin-top: 10px;
+    position: relative;
+}
+
+.class-details .date-time span {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.class-details .date-time svg {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Edit Button */
+.class-details .edit-btn {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px;
+}
+
+/* Optional: Hover effect on edit button */
+.class-details .edit-btn:hover {
+    color: darkblue;
+}
+
+
+
+
